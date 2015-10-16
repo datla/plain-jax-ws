@@ -1,5 +1,5 @@
 
-package com.kthree.ws.calc;
+package com.kthree.ws.service.calc;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,20 +17,20 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "CalculatorService", targetNamespace = "http://calc.ws.kthree.com/", wsdlLocation = "http://localhost:8888/CalculatorWs/Calculator?wsdl")
+@WebServiceClient(name = "CalculatorService", targetNamespace = "http://calc.service.ws.kthree.com/", wsdlLocation = "http://localhost:8080/CalculatorWs/Calculator?wsdl")
 public class CalculatorService
     extends Service
 {
 
     private final static URL CALCULATORSERVICE_WSDL_LOCATION;
     private final static WebServiceException CALCULATORSERVICE_EXCEPTION;
-    private final static QName CALCULATORSERVICE_QNAME = new QName("http://calc.ws.kthree.com/", "CalculatorService");
+    private final static QName CALCULATORSERVICE_QNAME = new QName("http://calc.service.ws.kthree.com/", "CalculatorService");
 
     static {
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8888/CalculatorWs/Calculator?wsdl");
+            url = new URL("http://localhost:8080/CalculatorWs/Calculator?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
@@ -69,7 +69,7 @@ public class CalculatorService
      */
     @WebEndpoint(name = "CalculatorPort")
     public Calculator getCalculatorPort() {
-        return super.getPort(new QName("http://calc.ws.kthree.com/", "CalculatorPort"), Calculator.class);
+        return super.getPort(new QName("http://calc.service.ws.kthree.com/", "CalculatorPort"), Calculator.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class CalculatorService
      */
     @WebEndpoint(name = "CalculatorPort")
     public Calculator getCalculatorPort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://calc.ws.kthree.com/", "CalculatorPort"), Calculator.class, features);
+        return super.getPort(new QName("http://calc.service.ws.kthree.com/", "CalculatorPort"), Calculator.class, features);
     }
 
     private static URL __getWsdlLocation() {

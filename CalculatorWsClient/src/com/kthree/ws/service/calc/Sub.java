@@ -1,5 +1,5 @@
 
-package com.kthree.ws.calc;
+package com.kthree.ws.service.calc;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for add complex type.
+ * <p>Java class for sub complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="add">
+ * &lt;complexType name="sub">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,11 +27,11 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "add", propOrder = {
+@XmlType(name = "sub", propOrder = {
     "arg0",
     "arg1"
 })
-public class Add {
+public class Sub {
 
     protected int arg0;
     protected int arg1;

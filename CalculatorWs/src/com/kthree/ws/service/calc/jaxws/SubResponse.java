@@ -1,5 +1,5 @@
 
-package com.kthree.ws.calc.jaxws;
+package com.kthree.ws.service.calc.jaxws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,9 +7,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "subResponse", namespace = "http://calc.ws.kthree.com/")
+@XmlRootElement(name = "subResponse", namespace = "http://calc.service.ws.kthree.com/")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "subResponse", namespace = "http://calc.ws.kthree.com/")
+@XmlType(name = "subResponse", namespace = "http://calc.service.ws.kthree.com/")
 public class SubResponse {
 
     @XmlElement(name = "return", namespace = "")

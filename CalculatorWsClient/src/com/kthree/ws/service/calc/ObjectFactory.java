@@ -1,5 +1,5 @@
 
-package com.kthree.ws.calc;
+package com.kthree.ws.service.calc;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;
@@ -10,7 +10,7 @@ import javax.xml.namespace.QName;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.kthree.ws.calc package. 
+ * generated in the com.kthree.ws.service.calc package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -24,13 +24,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Add_QNAME = new QName("http://calc.ws.kthree.com/", "add");
-    private final static QName _SubResponse_QNAME = new QName("http://calc.ws.kthree.com/", "subResponse");
-    private final static QName _AddResponse_QNAME = new QName("http://calc.ws.kthree.com/", "addResponse");
-    private final static QName _Sub_QNAME = new QName("http://calc.ws.kthree.com/", "sub");
+    private final static QName _Add_QNAME = new QName("http://calc.service.ws.kthree.com/", "add");
+    private final static QName _AddResponse_QNAME = new QName("http://calc.service.ws.kthree.com/", "addResponse");
+    private final static QName _Sub_QNAME = new QName("http://calc.service.ws.kthree.com/", "sub");
+    private final static QName _SubResponse_QNAME = new QName("http://calc.service.ws.kthree.com/", "subResponse");
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.kthree.ws.calc
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.kthree.ws.service.calc
      * 
      */
     public ObjectFactory() {
@@ -72,25 +72,16 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link Add }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://calc.ws.kthree.com/", name = "add")
+    @XmlElementDecl(namespace = "http://calc.service.ws.kthree.com/", name = "add")
     public JAXBElement<Add> createAdd(Add value) {
         return new JAXBElement<Add>(_Add_QNAME, Add.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://calc.ws.kthree.com/", name = "subResponse")
-    public JAXBElement<SubResponse> createSubResponse(SubResponse value) {
-        return new JAXBElement<SubResponse>(_SubResponse_QNAME, SubResponse.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://calc.ws.kthree.com/", name = "addResponse")
+    @XmlElementDecl(namespace = "http://calc.service.ws.kthree.com/", name = "addResponse")
     public JAXBElement<AddResponse> createAddResponse(AddResponse value) {
         return new JAXBElement<AddResponse>(_AddResponse_QNAME, AddResponse.class, null, value);
     }
@@ -99,9 +90,18 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link Sub }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://calc.ws.kthree.com/", name = "sub")
+    @XmlElementDecl(namespace = "http://calc.service.ws.kthree.com/", name = "sub")
     public JAXBElement<Sub> createSub(Sub value) {
         return new JAXBElement<Sub>(_Sub_QNAME, Sub.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://calc.service.ws.kthree.com/", name = "subResponse")
+    public JAXBElement<SubResponse> createSubResponse(SubResponse value) {
+        return new JAXBElement<SubResponse>(_SubResponse_QNAME, SubResponse.class, null, value);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.kthree.ws.calc;
+package com.kthree.ws.service.calc;
 
 import javax.jws.WebService;
 

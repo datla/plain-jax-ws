@@ -1,5 +1,5 @@
 
-package com.kthree.ws.calc;
+package com.kthree.ws.service.calc;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -17,7 +17,7 @@ import javax.xml.ws.ResponseWrapper;
  * Generated source version: 2.2
  * 
  */
-@WebService(name = "Calculator", targetNamespace = "http://calc.ws.kthree.com/")
+@WebService(name = "Calculator", targetNamespace = "http://calc.service.ws.kthree.com/")
 @XmlSeeAlso({
     ObjectFactory.class
 })
@@ -33,9 +33,9 @@ public interface Calculator {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "add", targetNamespace = "http://calc.ws.kthree.com/", className = "com.kthree.ws.calc.Add")
-    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://calc.ws.kthree.com/", className = "com.kthree.ws.calc.AddResponse")
-    @Action(input = "http://calc.ws.kthree.com/Calculator/addRequest", output = "http://calc.ws.kthree.com/Calculator/addResponse")
+    @RequestWrapper(localName = "add", targetNamespace = "http://calc.service.ws.kthree.com/", className = "com.kthree.ws.service.calc.Add")
+    @ResponseWrapper(localName = "addResponse", targetNamespace = "http://calc.service.ws.kthree.com/", className = "com.kthree.ws.service.calc.AddResponse")
+    @Action(input = "http://calc.service.ws.kthree.com/Calculator/addRequest", output = "http://calc.service.ws.kthree.com/Calculator/addResponse")
     public int add(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
@@ -51,9 +51,9 @@ public interface Calculator {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sub", targetNamespace = "http://calc.ws.kthree.com/", className = "com.kthree.ws.calc.Sub")
-    @ResponseWrapper(localName = "subResponse", targetNamespace = "http://calc.ws.kthree.com/", className = "com.kthree.ws.calc.SubResponse")
-    @Action(input = "http://calc.ws.kthree.com/Calculator/subRequest", output = "http://calc.ws.kthree.com/Calculator/subResponse")
+    @RequestWrapper(localName = "sub", targetNamespace = "http://calc.service.ws.kthree.com/", className = "com.kthree.ws.service.calc.Sub")
+    @ResponseWrapper(localName = "subResponse", targetNamespace = "http://calc.service.ws.kthree.com/", className = "com.kthree.ws.service.calc.SubResponse")
+    @Action(input = "http://calc.service.ws.kthree.com/Calculator/subRequest", output = "http://calc.service.ws.kthree.com/Calculator/subResponse")
     public int sub(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0,
